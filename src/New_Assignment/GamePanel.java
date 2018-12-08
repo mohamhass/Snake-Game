@@ -20,14 +20,14 @@ public class GamePanel extends JPanel implements Runnable{
     private Thread thread;
     private String directionOfSnake = "right";
 
-    private Timer timer;
+    private Timer timer; //Used to slow down the program
 
     GamePanel(){
         setFocusable(true);
         addKeyListener(keyListener);
         //Initialise the ArrayList and start the game
         snakeLength = new ArrayList<>();
-        
+
         startGame();
         //Set the background as black
         //For some reason the colour dosnt allow me to change to back. I think its because of the lines i have drawn on the screen
@@ -57,17 +57,21 @@ public class GamePanel extends JPanel implements Runnable{
 
         ticks++; //Increase the ticks. I want to use a proper timer
 
-        if (ticks > 1000000){ // This seems like a good time looooooool, I need to change this to a timer lol
-            if (directionOfSnake.equals("right")) posX++;
+        try {
+            Thread.sleep(60);// Sleeps the thread for 60 milliseconds. This seems so much better than just increasing a variable lol.
+        } catch (InterruptedException e) {
+            System.out.println("Could not sleep for 60");
+        }
+        if (directionOfSnake.equals("right")) posX++;
             if (directionOfSnake.equals("left")) posX--;
             if (directionOfSnake.equals("down")) posY ++;
             if (directionOfSnake.equals("up")) posY --;
 
-            ticks = 0;
+
 
             newSnakePart = new Snake(posX,posY,10);
             snakeLength.add(newSnakePart);
-        }
+
 
         if(snakeLength.size() > defaultSnakeSize){
             snakeLength.remove(0);
