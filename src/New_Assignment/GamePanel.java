@@ -11,16 +11,17 @@ public class GamePanel extends JPanel implements Runnable{
     private ArrayList<Snake> snakeLength;
     private Snake newSnakePart;
     private boolean running = false;
-
     private int defaultSnakeSize = 5;
     private int ticks = 0;
     private Thread thread;
-
     private boolean right = true, left = false, up = false, down = false;
 
     GamePanel(){
+        //Initialise the ArrayList and start the game
         snakeLength = new ArrayList<>();
         startGame();
+        //Set the background as black
+        //For some reason the colour dosnt allow me to change to back. I think its because of the lines i have drawn on the screen
         setBackground(Color.black);
         setForeground(Color.BLACK);
         repaint();
@@ -28,15 +29,14 @@ public class GamePanel extends JPanel implements Runnable{
     }
 
     public void startGame(){
+        //Set the running as true
         running = true;
-        //Initialize  5 snakeLength
+        //Create a new thread and start it
         thread = new Thread(this, "running Game");
-        thread.start();
-
+        thread.start(); //Start the thread
     }
 
     public void stopGame(){
-
     }
 
     private void refresh(){
@@ -45,9 +45,9 @@ public class GamePanel extends JPanel implements Runnable{
             snakeLength.add(newSnakePart);
         }
 
-        ticks++;
+        ticks++; //Increase the ticks. I want to use a proper timer
 
-        if (ticks > 1000000){
+        if (ticks > 1000000){ // This seems like a good time looooooool, change this to a timer please
             if (right) posX++;
             if (left) posX--;
             if (up) posY ++;

@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e132391e-a944-4ae5-ace3-0b9a7551a4e2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/New_Assignment/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/New_Assignment/GamePanel.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -75,14 +76,32 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="912818667">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="589" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="589" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/New_Assignment/GameFrame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="40" lean-forward="true" selection-start-line="12" selection-start-column="40" selection-end-line="12" selection-end-column="40" />
+            <state relative-caret-position="187">
+              <caret line="12" column="40" selection-start-line="12" selection-start-column="40" selection-end-line="12" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -111,8 +130,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/New_Assignment/GamePanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="457">
-              <caret line="70" column="43" lean-forward="true" selection-start-line="70" selection-start-column="43" selection-end-line="70" selection-end-column="43" />
+            <state relative-caret-position="-136">
+              <caret line="24" column="35" lean-forward="true" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -174,34 +193,21 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="Assignment 2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Assignment 2" type="462c0819:PsiDirectoryNode" />
+              <item name="SnakeGame" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SnakeGame" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Assignment 2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Assignment 2" type="462c0819:PsiDirectoryNode" />
-              <item name="code - sample for students" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Assignment 2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Assignment 2" type="462c0819:PsiDirectoryNode" />
-              <item name="code - sample for students" type="462c0819:PsiDirectoryNode" />
-              <item name="Game" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Assignment 2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Assignment 2" type="462c0819:PsiDirectoryNode" />
+              <item name="SnakeGame" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SnakeGame" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Assignment 2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Assignment 2" type="462c0819:PsiDirectoryNode" />
+              <item name="SnakeGame" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SnakeGame" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="New_Assignment" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -209,6 +215,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -319,17 +327,18 @@
       <workItem from="1544105414610" duration="1758000" />
       <workItem from="1544114986830" duration="2167000" />
       <workItem from="1544117202801" duration="16326000" />
+      <workItem from="1544298647668" duration="1535000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22435000" />
+    <option name="totallyTimeSpent" value="23970000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.09701493" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.09808102" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -431,11 +440,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="97" lean-forward="true" selection-start-line="97" selection-end-line="97" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#518#519#0" expanded="true" />
-            <element signature="e#538#539#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -447,13 +451,6 @@
             <element signature="imports" expanded="true" />
             <element signature="e#315#322#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/New_Assignment/Shape.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
         </state>
       </provider>
     </entry>
@@ -473,8 +470,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/New_Assignment/GameFrame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="40" lean-forward="true" selection-start-line="12" selection-start-column="40" selection-end-line="12" selection-end-column="40" />
+        <state relative-caret-position="187">
+          <caret line="12" column="40" selection-start-line="12" selection-start-column="40" selection-end-line="12" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -488,10 +485,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/New_Assignment/Shape.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/New_Assignment/GamePanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="457">
-          <caret line="70" column="43" lean-forward="true" selection-start-line="70" selection-start-column="43" selection-end-line="70" selection-end-column="43" />
+        <state relative-caret-position="-136">
+          <caret line="24" column="35" lean-forward="true" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
