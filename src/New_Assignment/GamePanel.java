@@ -2,6 +2,8 @@ package New_Assignment;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import java.util.ArrayList;
 
 public class GamePanel extends JPanel implements Runnable{
@@ -14,9 +16,11 @@ public class GamePanel extends JPanel implements Runnable{
     private int defaultSnakeSize = 5;
     private int ticks = 0;
     private Thread thread;
-    private boolean right = true, left = false, up = false, down = false;
+    private String directionOfSnake;
 
     GamePanel(){
+        setFocusable(true);
+        addKeyListener(keyListener);
         //Initialise the ArrayList and start the game
         snakeLength = new ArrayList<>();
         startGame();
@@ -27,6 +31,7 @@ public class GamePanel extends JPanel implements Runnable{
         repaint();
 
     }
+
 
     public void startGame(){
         //Set the running as true
@@ -48,10 +53,10 @@ public class GamePanel extends JPanel implements Runnable{
         ticks++; //Increase the ticks. I want to use a proper timer
 
         if (ticks > 1000000){ // This seems like a good time looooooool, change this to a timer please
-            if (right) posX++;
-            if (left) posX--;
-            if (up) posY ++;
-            if (down) posY --;
+            if (directionOfSnake.equals("right")) posX++;
+            if (directionOfSnake.equals("left")) posX--;
+            if (directionOfSnake.equals("up")) posY ++;
+            if (directionOfSnake.equals("down")) posY --;
 
             ticks = 0;
 
@@ -66,7 +71,7 @@ public class GamePanel extends JPanel implements Runnable{
     }
 
     public void paint(Graphics g){
-        g.clearRect(0,0,WIDTH, HEIGHT);
+        g.clearRect(0,0,WIDTH, HEIGHT); //Clear the screen after every refresh
         g.setColor(Color.BLACK);
         for (int i = 0; i < WIDTH/10; i++){
             g.drawLine(i * 10, 0, i * 10, HEIGHT);
@@ -87,6 +92,38 @@ public class GamePanel extends JPanel implements Runnable{
             repaint();
         }
     }
+
+    KeyListener keyListener = new KeyListener() {
+        @Override
+        public void keyTyped(KeyEvent e) {
+
+        }
+
+        @Override
+        public void keyPressed(KeyEvent e) {
+            int keyPressed = e.getKeyCode();
+            if (keyPressed == KeyEvent.VK_RIGHT && !directionOfSnake.equals("left")){
+                directionOfSnake = "right";
+            }
+            if (keyPressed == KeyEvent.VK_LEFT && !directionOfSnake.equals("right")){
+                directionOfSnake = "left";
+            }
+            if (keyPressed == KeyEvent.VK_UP && !directionOfSnake.equals("down")){
+                directionOfSnake = "up";
+            }
+            if (keyPressed == KeyEvent.VK_DOWN && !directionOfSnake.equals("up")){
+                directionOfSnake = "down";
+            }
+
+        }
+
+        @Override
+        public void keyReleased(KeyEvent e) {
+
+        }
+    };
+
+
 
 
 }
