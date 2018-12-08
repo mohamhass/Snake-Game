@@ -5,6 +5,8 @@ import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.util.ArrayList;
+import java.util.Timer;
+
 
 public class GamePanel extends JPanel implements Runnable{
     private int posX = 10;
@@ -16,13 +18,16 @@ public class GamePanel extends JPanel implements Runnable{
     private int defaultSnakeSize = 5;
     private int ticks = 0;
     private Thread thread;
-    private String directionOfSnake;
+    private String directionOfSnake = "right";
+
+    private Timer timer;
 
     GamePanel(){
         setFocusable(true);
         addKeyListener(keyListener);
         //Initialise the ArrayList and start the game
         snakeLength = new ArrayList<>();
+        
         startGame();
         //Set the background as black
         //For some reason the colour dosnt allow me to change to back. I think its because of the lines i have drawn on the screen
@@ -52,11 +57,11 @@ public class GamePanel extends JPanel implements Runnable{
 
         ticks++; //Increase the ticks. I want to use a proper timer
 
-        if (ticks > 1000000){ // This seems like a good time looooooool, change this to a timer please
+        if (ticks > 1000000){ // This seems like a good time looooooool, I need to change this to a timer lol
             if (directionOfSnake.equals("right")) posX++;
             if (directionOfSnake.equals("left")) posX--;
-            if (directionOfSnake.equals("up")) posY ++;
-            if (directionOfSnake.equals("down")) posY --;
+            if (directionOfSnake.equals("down")) posY ++;
+            if (directionOfSnake.equals("up")) posY --;
 
             ticks = 0;
 
