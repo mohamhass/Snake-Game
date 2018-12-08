@@ -86,14 +86,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="1112" />
-          <entry key="txt" value="44" />
+          <entry key="java" value="1652" />
+          <entry key="txt" value="133" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="1112" />
-          <entry key="PLAIN_TEXT" value="44" />
+          <entry key="JAVA" value="1652" />
+          <entry key="PLAIN_TEXT" value="133" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -148,8 +148,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/New_Assignment/GamePanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-153">
-              <caret line="26" column="40" selection-start-line="26" selection-start-column="40" selection-end-line="26" selection-end-column="40" />
+            <state relative-caret-position="-238">
+              <caret line="26" column="56" lean-forward="true" selection-start-line="26" selection-start-column="56" selection-end-line="26" selection-end-column="56" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -356,7 +356,7 @@
       <workItem from="1544105414610" duration="1758000" />
       <workItem from="1544114986830" duration="2167000" />
       <workItem from="1544117202801" duration="16326000" />
-      <workItem from="1544298647668" duration="4341000" />
+      <workItem from="1544298647668" duration="5766000" />
     </task>
     <task id="LOCAL-00001" summary="Added some comments">
       <created>1544300408178</created>
@@ -372,15 +372,28 @@
       <option name="project" value="LOCAL" />
       <updated>1544303740038</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="fix the keylistener">
+      <created>1544304395037</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1544304395037</updated>
+    </task>
+    <task id="LOCAL-00004" summary="used thread sleeping instead of variable incrementing">
+      <created>1544305107106</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1544305107106</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26776000" />
+    <option name="totallyTimeSpent" value="28201000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1096" extended-state="7" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.09808102" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -452,7 +465,9 @@
     <MESSAGE value="The Beginning&#10;" />
     <MESSAGE value="Added some comments" />
     <MESSAGE value="Implemented KeyListener" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented KeyListener" />
+    <MESSAGE value="fix the keylistener" />
+    <MESSAGE value="used thread sleeping instead of variable incrementing" />
+    <option name="LAST_COMMIT_MESSAGE" value="used thread sleeping instead of variable incrementing" />
   </component>
   <component name="editorHistoryManager">
     <entry file="jar://$USER_HOME$/Downloads/jdk1.8.0_191/src.zip!/javax/swing/JComponent.java" />
@@ -539,8 +554,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/New_Assignment/GamePanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-153">
-          <caret line="26" column="40" selection-start-line="26" selection-start-column="40" selection-end-line="26" selection-end-column="40" />
+        <state relative-caret-position="-238">
+          <caret line="26" column="56" lean-forward="true" selection-start-line="26" selection-start-column="56" selection-end-line="26" selection-end-column="56" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

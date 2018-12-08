@@ -9,11 +9,15 @@ import java.util.Timer;
 
 
 public class GamePanel extends JPanel implements Runnable{
+    //These positions are the start default
     private int posX = 10;
     private int posY = 10;
-    private static final int WIDTH = 800, HEIGHT = 800;
+
+    private static final int WIDTH = 800, HEIGHT = 800;//size of the JPanel, these need to be the same as the JFrame
+
     private ArrayList<Snake> snakeLength;
     private Snake newSnakePart;
+
     private boolean running = false;
     private int defaultSnakeSize = 5;
     private int ticks = 0;
@@ -44,6 +48,13 @@ public class GamePanel extends JPanel implements Runnable{
         //Create a new thread and start it
         thread = new Thread(this, "running Game");
         thread.start(); //Start the thread
+    }
+
+    public void run(){
+        while (true) {
+            refresh();
+            repaint();
+        }
     }
 
     public void stopGame(){
@@ -82,12 +93,16 @@ public class GamePanel extends JPanel implements Runnable{
     public void paint(Graphics g){
         g.clearRect(0,0,WIDTH, HEIGHT); //Clear the screen after every refresh
         g.setColor(Color.BLACK);
+
+        /*Some debugging - Added lines vertically and horizontally to create a grid*/
         for (int i = 0; i < WIDTH/10; i++){
             g.drawLine(i * 10, 0, i * 10, HEIGHT);
         }
         for (int i = 0; i<HEIGHT/10; i++){
             g.drawLine(0,i*10, WIDTH, i*10);
         }
+
+
         //For every item in snakeLength draw
         for (Snake snakeSquare : snakeLength) {
             snakeSquare.draw(g);
@@ -95,13 +110,10 @@ public class GamePanel extends JPanel implements Runnable{
 
     }
 
-    public void run(){
-        while (true) {
-            refresh();
-            repaint();
-        }
-    }
 
+
+
+    //The keyListener changes the directionOfSnake variable to the direction based on the key pressed
     KeyListener keyListener = new KeyListener() {
         @Override
         public void keyTyped(KeyEvent e) {
