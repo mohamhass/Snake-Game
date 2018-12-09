@@ -19,4 +19,7 @@ class Snake extends Shape{
         g.fillRect((posX * width + 2),(posY * height + 2), width,height);
     }
 
+    public int getposX(){return posX;}
+    public int getposY(){return posY;}
+
 }

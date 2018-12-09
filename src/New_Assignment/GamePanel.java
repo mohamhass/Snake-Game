@@ -10,6 +10,7 @@ public class GamePanel extends JPanel implements Runnable{
     private int posX = 10;
     private int posY = 10;
 
+
     private static final int WIDTH = 800, HEIGHT = 800;//size of the JPanel, these need to be the same as the JFrame
 
     private ArrayList<Snake> snakeLength;
@@ -18,11 +19,10 @@ public class GamePanel extends JPanel implements Runnable{
     private boolean running = false;
     private int defaultSnakeSize = 10;
     private GameKeyListener key = new GameKeyListener();
-    private Rewards newReward;
-
 
 
     GamePanel(){
+
         //Add the keyListener
         setFocusable(true);
         requestFocusInWindow();
@@ -35,9 +35,7 @@ public class GamePanel extends JPanel implements Runnable{
 
         //Set the background as black
         //For some reason the colour dosnt allow me to change to back. I think its because of the lines i have drawn on the screen
-        setBackground(Color.black);
-        setForeground(Color.BLACK);
-        repaint();
+
 
     }
 
@@ -72,23 +70,44 @@ public class GamePanel extends JPanel implements Runnable{
 
         //Creates a random reward in a random location
         if (rewardsOnMap.size() == 0){
-            int posX = (int) (Math.random() * (79));
-            int posY = (int) (Math.random() * (79));
-            newReward = new Rewards(posX,posY,10);
+            //Random numbers generated for the position of the Rewards
+            int random_posX = (int) (Math.random() * (79));
+            int random_posY = (int) (Math.random() * (79));
+            Rewards newReward = new Rewards(random_posX, random_posY, 10);
             rewardsOnMap.add(newReward);
         }
 
+        //If the snake position is the same as the rewards on map position then increase the snake size and remove the reward.
+        //Only true for the snake head
         for (int x =0; x < rewardsOnMap.size(); x++){
             if ((posX == rewardsOnMap.get(x).getposX()) && (posY == rewardsOnMap.get(x).getposY())){
-                defaultSnakeSize++;
+                defaultSnakeSize = defaultSnakeSize + 10;
                 rewardsOnMap.remove(x);
                 x--;
             }
         }
 
+        //If the position of the snake is greater than the size of the screen, the snake will come back from 0
+        if (posX < 0 || posX > (WIDTH / 10) - 1 || posY < 0 || posY > (HEIGHT / 10) - 1){
+            if(posX < 0) posX = 79;
+            if(posX > 79) posX = 0;
+            if (posY > 79) posY =0;
+            if(posY < 0) posY = 79;
+        }
+
+        //If any part of the snake has the same posX or posY as the current posX and posY then the game will stop
+        for(int x =0; x <snakeLength.size(); x++){
+            if ((posX == snakeLength.get(x).getposX()) && (posY == snakeLength.get(x).getposY())){
+                //The if statement allows the head to not be checked, otherwise when the game starts the head is always the same
+                if (x != snakeLength.size() -1){
+                    stopGame();
+                }
+
+            }
+        }
 
         try {
-            Thread.sleep(60);// Sleeps the thread for 60 milliseconds. This seems so much better than just increasing a variable lol.
+            Thread.sleep(50);// Sleeps the thread for 60 milliseconds. This seems so much better than just increasing a variable lol.
         } catch (InterruptedException e) {
             System.out.println("Could not sleep for 60");
         }
@@ -110,10 +129,11 @@ public class GamePanel extends JPanel implements Runnable{
     }
 
     public void paint(Graphics g){
-        g.clearRect(0,0,WIDTH, HEIGHT); //Clear the screen after every refresh
-        g.setColor(Color.BLACK);
 
-        /*Some debugging - Added lines vertically and horizontally to create a grid*/
+        g.clearRect(0,0,WIDTH, HEIGHT); //Clear the screen after every refresh
+        g.setColor(Color.green);
+
+        //Some debugging - Added lines vertically and horizontally to create a grid
         for (int i = 0; i < WIDTH/10; i++){
             g.drawLine(i * 10, 0, i * 10, HEIGHT);
         }
@@ -135,6 +155,11 @@ public class GamePanel extends JPanel implements Runnable{
 
 
 
+    }
+    // Sets the size for the JPanel
+    @Override
+    public Dimension getPreferredSize() {
+        return new Dimension(WIDTH, HEIGHT);
     }
 
 }

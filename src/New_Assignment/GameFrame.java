@@ -9,8 +9,8 @@ public class GameFrame extends JFrame{
 
     private GameFrame(){
         GamePanel game = new GamePanel();
+        game.setBackground(Color.green);
         add(game);
-        this.setBackground(Color.BLACK);
         TopMenu();
         init();
         game.startGame();
@@ -31,7 +31,7 @@ public class GameFrame extends JFrame{
         //Set the close operation and the title
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setTitle("SnakeSquare Game by: 1605229");
-        setSize(800,800);
+        pack();
         setVisible(true);
 
     }
