@@ -20,19 +20,20 @@ public class GamePanel extends JPanel implements Runnable{
 
     private boolean running = false;
     private int defaultSnakeSize = 5;
-    private int ticks = 0;
     private Thread thread;
-    private String directionOfSnake = "right";
+    public String directionOfSnake = "right";
 
-    private Timer timer; //Used to slow down the program
 
     GamePanel(){
+        //Add the keyListener
         setFocusable(true);
-        addKeyListener(keyListener);
+        requestFocusInWindow();
+        addKeyListener(key);
+
+
         //Initialise the ArrayList and start the game
         snakeLength = new ArrayList<>();
 
-        startGame();
         //Set the background as black
         //For some reason the colour dosnt allow me to change to back. I think its because of the lines i have drawn on the screen
         setBackground(Color.black);
@@ -58,6 +59,8 @@ public class GamePanel extends JPanel implements Runnable{
     }
 
     public void stopGame(){
+        running = false; //stop the game
+        thread.stop(); //Stop the tread
     }
 
     private void refresh(){
@@ -66,7 +69,6 @@ public class GamePanel extends JPanel implements Runnable{
             snakeLength.add(newSnakePart);
         }
 
-        ticks++; //Increase the ticks. I want to use a proper timer
 
         try {
             Thread.sleep(60);// Sleeps the thread for 60 milliseconds. This seems so much better than just increasing a variable lol.
@@ -77,8 +79,6 @@ public class GamePanel extends JPanel implements Runnable{
             if (directionOfSnake.equals("left")) posX--;
             if (directionOfSnake.equals("down")) posY ++;
             if (directionOfSnake.equals("up")) posY --;
-
-
 
             newSnakePart = new Snake(posX,posY,10);
             snakeLength.add(newSnakePart);
@@ -108,13 +108,12 @@ public class GamePanel extends JPanel implements Runnable{
             snakeSquare.draw(g);
         }
 
+        
+
     }
 
-
-
-
     //The keyListener changes the directionOfSnake variable to the direction based on the key pressed
-    KeyListener keyListener = new KeyListener() {
+    KeyListener key = new KeyListener() {
         @Override
         public void keyTyped(KeyEvent e) {
 
@@ -143,8 +142,5 @@ public class GamePanel extends JPanel implements Runnable{
 
         }
     };
-
-
-
 
 }

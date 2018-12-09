@@ -6,12 +6,14 @@ import java.awt.*;
 
 public class GameFrame extends JFrame{
     public static void main(String[] args) {new GameFrame();}
-    private GamePanel something = new GamePanel();
+    private GamePanel game = new GamePanel();
 
     private GameFrame(){
-        add(something);
+        add(game);
         this.setBackground(Color.BLACK);
         init();
+        game.startGame();
+
     }
 
     private void init(){

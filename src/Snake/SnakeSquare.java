@@ -6,7 +6,7 @@ class SnakeSquare extends Shape {
     int rectSize;
 
 
-    public SnakeSquare(int posX, int posY, int rectSize) {
+    SnakeSquare(int posX, int posY, int rectSize) {
         this.posX = posX;
         this.posY = posY;
         this.rectSize = rectSize;
