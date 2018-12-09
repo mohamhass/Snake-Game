@@ -6,14 +6,5 @@ class Shape {
     int posY;
     int height;
     int width;
-
-
-
-
-
-
-
-
-
 }
 

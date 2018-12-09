@@ -6,13 +6,24 @@ import java.awt.*;
 
 public class GameFrame extends JFrame{
     public static void main(String[] args) {new GameFrame();}
-    private GamePanel game = new GamePanel();
 
     private GameFrame(){
+        GamePanel game = new GamePanel();
         add(game);
         this.setBackground(Color.BLACK);
+        TopMenu();
         init();
         game.startGame();
+
+    }
+
+    private void TopMenu(){
+        //Create a JMenu bar
+        JMenuBar bar = new JMenuBar();
+        setJMenuBar(bar);
+        //Add a settings tab
+        JMenu menu = new JMenu("Settings");
+        bar.add(menu);
 
     }
 

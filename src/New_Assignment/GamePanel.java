@@ -13,10 +13,12 @@ public class GamePanel extends JPanel implements Runnable{
     private static final int WIDTH = 800, HEIGHT = 800;//size of the JPanel, these need to be the same as the JFrame
 
     private ArrayList<Snake> snakeLength;
+    private ArrayList<Rewards> rewardsOnMap;
 
     private boolean running = false;
     private int defaultSnakeSize = 10;
     private GameKeyListener key = new GameKeyListener();
+    private Rewards newReward;
 
 
 
@@ -29,6 +31,7 @@ public class GamePanel extends JPanel implements Runnable{
 
         //Initialise the ArrayList and start the game
         snakeLength = new ArrayList<>();
+        rewardsOnMap = new ArrayList<>();
 
         //Set the background as black
         //For some reason the colour dosnt allow me to change to back. I think its because of the lines i have drawn on the screen
@@ -60,10 +63,27 @@ public class GamePanel extends JPanel implements Runnable{
     }
 
     private void refresh(){
+        //if there is nothing in the snake arraylist we will have to add new snake objects
         Snake newSnakePart;
         if (snakeLength.size() == 0){
             newSnakePart = new Snake(posX,posY,10);
             snakeLength.add(newSnakePart);
+        }
+
+        //Creates a random reward in a random location
+        if (rewardsOnMap.size() == 0){
+            int posX = (int) (Math.random() * (79));
+            int posY = (int) (Math.random() * (79));
+            newReward = new Rewards(posX,posY,10);
+            rewardsOnMap.add(newReward);
+        }
+
+        for (int x =0; x < rewardsOnMap.size(); x++){
+            if ((posX == rewardsOnMap.get(x).getposX()) && (posY == rewardsOnMap.get(x).getposY())){
+                defaultSnakeSize++;
+                rewardsOnMap.remove(x);
+                x--;
+            }
         }
 
 
@@ -72,6 +92,8 @@ public class GamePanel extends JPanel implements Runnable{
         } catch (InterruptedException e) {
             System.out.println("Could not sleep for 60");
         }
+
+
         if (key.directionOfSnake.equals("right")) posX++;
             if (key.directionOfSnake.equals("left")) posX--;
             if (key.directionOfSnake.equals("down")) posY ++;
@@ -105,7 +127,14 @@ public class GamePanel extends JPanel implements Runnable{
             snakeSquare.draw(g);
         }
 
+        //for every reward in rewardsOnMap draw
+        for (Rewards aReward : rewardsOnMap) {
+            aReward.draw(g);
+        }
+
+
 
 
     }
+
 }

@@ -4,7 +4,7 @@ import java.awt.*;
 
 public class Rewards extends Shape {
 
-    private Rewards(int posX, int posY, int squareSize){
+    public Rewards(int posX, int posY, int squareSize){
             this.posX = posX;
             this.posY = posY;
             this.height = squareSize;
@@ -13,8 +13,12 @@ public class Rewards extends Shape {
 
         public void draw(Graphics g){
             g.setColor(Color.black);
-            g.fillRect((posX * width + 2),(posY * height + 2), width,height);
-            g.setColor(Color.green);
-            g.fillRect((posX * width + 2),(posY * height + 2), width,height);
+            g.fillRect(posX * width, posY * height, width, height);
         }
+
+        public int getposX (){ return posX;}
+        public int getposY(){return posY;}
+
+
+
 }
