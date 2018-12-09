@@ -11,8 +11,8 @@ public class GameFrame extends JFrame{
 
     private GamePanel game = new GamePanel();
 
-    private GameFrame(){
 
+    private GameFrame(){
         game.setBackground(Color.green);
         add(game);
         TopMenu();
@@ -26,19 +26,31 @@ public class GameFrame extends JFrame{
         JMenuBar bar = new JMenuBar();
         setJMenuBar(bar);
         //Add a settings tab
-        JMenu menu = new JMenu("Settings");
+        JMenu file = new JMenu("File");
+        JMenu settings = new JMenu("Settings");
 
-
+        //Add restart button and assign new ActionListener
         JMenuItem restart = new JMenuItem("Restart");
-        restart.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                game.restartGame();
-            }
-        });
-        menu.add(restart);
+        restart.addActionListener(new GameActionListener(game, 1));
+        file.add(restart);
 
-        bar.add(menu);
+
+
+        // 3 level difficulty
+        JMenu difficulty = new JMenu("Difficulty");
+        JMenuItem easy = new JMenuItem("EASY");
+        JMenuItem medium = new JMenuItem("MEDIUM");
+        JMenuItem hard = new JMenuItem("HARD");
+        difficulty.add(easy);
+        difficulty.add(medium);
+        difficulty.add(hard);
+
+        easy.addActionListener(new GameActionListener(game,2));
+        medium.addActionListener(new GameActionListener(game,3));
+        hard.addActionListener(new GameActionListener(game, 4));
+
+        bar.add(file);
+        bar.add(difficulty);
     }
 
     private void init(){

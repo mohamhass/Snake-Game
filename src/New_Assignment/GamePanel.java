@@ -7,19 +7,20 @@ import java.util.ArrayList;
 
 public class GamePanel extends JPanel implements Runnable{
     //posX and posY positions are the start default
-    private int posX = 10;
-    private int posY = 10;
+    protected int posX = 10;
+    protected int posY = 10;
 
 
     private static final int WIDTH = 800, HEIGHT = 800;//size of the JPanel, these need to be the same as the JFrame
 
-    private ArrayList<Snake> snakeLength;
-    private ArrayList<Rewards> rewardsOnMap;
+    protected ArrayList<Snake> snakeLength;
+    protected ArrayList<Rewards> rewardsOnMap;
+    public int points = 10;
 
-    private boolean running = false;
-    private int defaultSnakeSize = 10;
+
+    protected boolean running = false;
+    protected int defaultSnakeSize = 1;
     private GameKeyListener key = new GameKeyListener();
-    private Thread thread;
 
 
     GamePanel(){
@@ -43,7 +44,7 @@ public class GamePanel extends JPanel implements Runnable{
     public void restartGame(){
         snakeLength.clear();
         rewardsOnMap.clear();
-        defaultSnakeSize = 10;
+        defaultSnakeSize = 1;
         posX = 10;
         posY = 10;
         running =  true;
@@ -52,7 +53,7 @@ public class GamePanel extends JPanel implements Runnable{
 
     public void startGame(){
         //Create a new thread and start it
-        thread = new Thread(this, "running Game");
+        Thread thread = new Thread(this, "running Game");
         thread.start(); //Start the thread
         //Set the running as true
         running = true;
@@ -74,6 +75,7 @@ public class GamePanel extends JPanel implements Runnable{
     private void refresh(){
         //if there is nothing in the snake arraylist we will have to add new snake objects
         Snake newSnakePart;
+
         if (snakeLength.size() == 0){
             newSnakePart = new Snake(posX,posY,10);
             snakeLength.add(newSnakePart);
@@ -92,7 +94,7 @@ public class GamePanel extends JPanel implements Runnable{
         //Only true for the snake head
         for (int x =0; x < rewardsOnMap.size(); x++){
             if ((posX == rewardsOnMap.get(x).getposX()) && (posY == rewardsOnMap.get(x).getposY())){
-                defaultSnakeSize = defaultSnakeSize + 10;
+                defaultSnakeSize = defaultSnakeSize + points;
                 rewardsOnMap.remove(x);
                 x--;
             }

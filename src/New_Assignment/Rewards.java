@@ -3,6 +3,7 @@ package New_Assignment;
 import java.awt.*;
 
 public class Rewards extends Shape {
+    public int points = 1;
 
     public Rewards(int posX, int posY, int squareSize){
             this.posX = posX;
@@ -18,6 +19,7 @@ public class Rewards extends Shape {
 
         public int getposX (){ return posX;}
         public int getposY(){return posY;}
+        public int getPoints(){return points;}
 
 
 
