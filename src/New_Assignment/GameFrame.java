@@ -2,13 +2,17 @@ package New_Assignment;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 
 public class GameFrame extends JFrame{
     public static void main(String[] args) {new GameFrame();}
 
+    private GamePanel game = new GamePanel();
+
     private GameFrame(){
-        GamePanel game = new GamePanel();
+
         game.setBackground(Color.green);
         add(game);
         TopMenu();
@@ -23,8 +27,18 @@ public class GameFrame extends JFrame{
         setJMenuBar(bar);
         //Add a settings tab
         JMenu menu = new JMenu("Settings");
-        bar.add(menu);
 
+
+        JMenuItem restart = new JMenuItem("Restart");
+        restart.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                game.restartGame();
+            }
+        });
+        menu.add(restart);
+
+        bar.add(menu);
     }
 
     private void init(){

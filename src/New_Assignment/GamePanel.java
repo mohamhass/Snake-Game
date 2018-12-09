@@ -19,6 +19,7 @@ public class GamePanel extends JPanel implements Runnable{
     private boolean running = false;
     private int defaultSnakeSize = 10;
     private GameKeyListener key = new GameKeyListener();
+    private Thread thread;
 
 
     GamePanel(){
@@ -39,13 +40,23 @@ public class GamePanel extends JPanel implements Runnable{
 
     }
 
+    public void restartGame(){
+        snakeLength.clear();
+        rewardsOnMap.clear();
+        defaultSnakeSize = 10;
+        posX = 10;
+        posY = 10;
+        running =  true;
+    }
+
 
     public void startGame(){
+        //Create a new thread and start it
+        thread = new Thread(this, "running Game");
+        thread.start(); //Start the thread
         //Set the running as true
         running = true;
-        //Create a new thread and start it
-        Thread thread = new Thread(this, "running Game");
-        thread.start(); //Start the thread
+
     }
 
     public void run(){
@@ -101,6 +112,7 @@ public class GamePanel extends JPanel implements Runnable{
                 //The if statement allows the head to not be checked, otherwise when the game starts the head is always the same
                 if (x != snakeLength.size() -1){
                     stopGame();
+                    restartGame();
                 }
 
             }
