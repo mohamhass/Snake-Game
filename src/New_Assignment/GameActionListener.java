@@ -40,9 +40,7 @@ public class GameActionListener implements ActionListener {
             setHard();
         }
         if (action == 1){
-            if (easy){setEasy();}
-            if (medium){setMedium();}
-            if (hard){setHard();}
+            theGame.restartGame();
         }
     }
 

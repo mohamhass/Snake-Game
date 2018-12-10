@@ -2,19 +2,19 @@ package New_Assignment;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 
 public class GameFrame extends JFrame{
     public static void main(String[] args) {new GameFrame();}
 
     private GamePanel game = new GamePanel();
+    private ScorePanel scores = new ScorePanel(game.points);
 
 
     private GameFrame(){
-        game.setBackground(Color.green);
+        getContentPane().setBackground(new Color(0,26,14));
         add(game);
+
         TopMenu();
         init();
         game.startGame();
@@ -26,13 +26,12 @@ public class GameFrame extends JFrame{
         JMenuBar bar = new JMenuBar();
         setJMenuBar(bar);
         //Add a settings tab
-        JMenu file = new JMenu("File");
         JMenu settings = new JMenu("Settings");
 
         //Add restart button and assign new ActionListener
         JMenuItem restart = new JMenuItem("Restart");
         restart.addActionListener(new GameActionListener(game, 1));
-        file.add(restart);
+        settings.add(restart);
 
 
 
@@ -49,7 +48,7 @@ public class GameFrame extends JFrame{
         medium.addActionListener(new GameActionListener(game,3));
         hard.addActionListener(new GameActionListener(game, 4));
 
-        bar.add(file);
+        bar.add(settings);
         bar.add(difficulty);
     }
 
@@ -61,7 +60,6 @@ public class GameFrame extends JFrame{
         setVisible(true);
 
     }
-
 
 
 }

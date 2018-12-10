@@ -16,7 +16,7 @@ class Snake extends Shape{
         g.setColor(Color.black);
         g.fillRect((posX * width + 2),(posY * height + 2), width,height);
         g.setColor(Color.green);
-        g.fillRect((posX * width + 2),(posY * height + 2), width,height);
+        g.fillRect((posX * width + 2),(posY * height + 2), width - 4,height - 4);
     }
 
     public int getposX(){return posX;}

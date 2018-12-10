@@ -24,7 +24,7 @@ public class GamePanel extends JPanel implements Runnable{
 
 
     GamePanel(){
-
+        setOpaque(false);
         //Add the keyListener
         setFocusable(true);
         requestFocusInWindow();
@@ -121,7 +121,7 @@ public class GamePanel extends JPanel implements Runnable{
         }
 
         try {
-            Thread.sleep(50);// Sleeps the thread for 60 milliseconds. This seems so much better than just increasing a variable lol.
+            Thread.sleep(55);// Sleeps the thread for 60 milliseconds. This seems so much better than just increasing a variable lol.
         } catch (InterruptedException e) {
             System.out.println("Could not sleep for 60");
         }
@@ -144,8 +144,7 @@ public class GamePanel extends JPanel implements Runnable{
 
     public void paint(Graphics g){
 
-        g.clearRect(0,0,WIDTH, HEIGHT); //Clear the screen after every refresh
-        g.setColor(Color.green);
+        g.setColor(Color.black);
 
         //Some debugging - Added lines vertically and horizontally to create a grid
         for (int i = 0; i < WIDTH/10; i++){

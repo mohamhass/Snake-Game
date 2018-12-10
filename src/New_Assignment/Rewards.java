@@ -13,7 +13,7 @@ public class Rewards extends Shape {
         }
 
         public void draw(Graphics g){
-            g.setColor(Color.black);
+            g.setColor(Color.red);
             g.fillRect(posX * width, posY * height, width, height);
         }
 
