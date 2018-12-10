@@ -44,10 +44,12 @@ public class GameFrame extends JFrame{
         difficulty.add(medium);
         difficulty.add(hard);
 
+        //Add ActionListeners to all the buttons and the unique action id
         easy.addActionListener(new GameActionListener(game,2));
         medium.addActionListener(new GameActionListener(game,3));
         hard.addActionListener(new GameActionListener(game, 4));
 
+        //Add the menu items to bar
         bar.add(settings);
         bar.add(difficulty);
     }

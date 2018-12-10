@@ -38,8 +38,6 @@ public class GamePanel extends JPanel implements Runnable{
         snakeLength = new ArrayList<>();
         rewardsOnMap = new ArrayList<>();
 
-        //Set the background as black
-        //For some reason the colour dosn't allow me to change to back. I think its because of the lines i have drawn on the screen
 
 
     }
@@ -51,6 +49,7 @@ public class GamePanel extends JPanel implements Runnable{
         posX = 10;
         posY = 10;
         running =  true;
+        startGame();
     }
 
 
@@ -123,7 +122,6 @@ public class GamePanel extends JPanel implements Runnable{
                 //The if statement allows the head to not be checked, otherwise when the game starts the head is always the same
                 if (x != snakeLength.size() -1){
                     stopGame();
-                    restartGame();
                 }
 
             }
