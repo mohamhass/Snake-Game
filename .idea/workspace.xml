@@ -2,15 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e132391e-a944-4ae5-ace3-0b9a7551a4e2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/New_Assignment/ScorePanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Assignment 2/New_Assignment/GameFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Assignment 2/New_Assignment/GameFrame.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Assignment 2/New_Assignment/GamePanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Assignment 2/New_Assignment/GamePanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/New_Assignment/GameActionListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/New_Assignment/GameActionListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Assignment 2/New_Assignment/Snake.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Assignment 2/New_Assignment/Snake.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/New_Assignment/GameFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/New_Assignment/GameFrame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/New_Assignment/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/New_Assignment/GamePanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/New_Assignment/Rewards.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/New_Assignment/Rewards.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/New_Assignment/TopMenuBar.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/New_Assignment/ScorePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/New_Assignment/ScorePanel.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -100,8 +98,8 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="7898" />
-          <entry key="PLAIN_TEXT" value="458" />
+          <entry key="JAVA" value="8948" />
+          <entry key="PLAIN_TEXT" value="502" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -128,8 +126,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/New_Assignment/GameFrame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="56" selection-start-line="14" selection-start-column="56" selection-end-line="14" selection-end-column="56" />
+            <state relative-caret-position="255">
+              <caret line="15" column="18" lean-forward="true" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -140,11 +138,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/New_Assignment/ScorePanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" selection-start-line="12" selection-end-line="12" />
+            <state relative-caret-position="408">
+              <caret line="24" column="36" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
               <folding>
-                <element signature="e#138#139#0" expanded="true" />
-                <element signature="e#174#175#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -174,10 +171,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/New_Assignment/GamePanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1377">
-              <caret line="26" column="25" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
+            <state relative-caret-position="270">
+              <caret line="108" column="39" selection-start-line="108" selection-start-column="39" selection-end-line="108" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#5394#5395#0" expanded="true" />
+                <element signature="e#5445#5446#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -186,8 +185,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/New_Assignment/Snake.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+            <state relative-caret-position="289">
+              <caret line="17" column="30" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -252,14 +251,14 @@
         <option value="$PROJECT_DIR$/src/Snake/SnakeSquare.java" />
         <option value="$PROJECT_DIR$/src/New_Assignment/GameKeyListener.java" />
         <option value="$PROJECT_DIR$/src/New_Assignment/Shape.java" />
-        <option value="$PROJECT_DIR$/src/New_Assignment/Snake.java" />
         <option value="$PROJECT_DIR$/src/Snake/LoserPanel.java" />
         <option value="$PROJECT_DIR$/src/New_Assignment/TopMenuBar.java" />
         <option value="$PROJECT_DIR$/src/New_Assignment/GameActionListener.java" />
         <option value="$PROJECT_DIR$/src/New_Assignment/Scores.java" />
-        <option value="$PROJECT_DIR$/src/New_Assignment/ScorePanel.java" />
         <option value="$PROJECT_DIR$/src/New_Assignment/Rewards.java" />
+        <option value="$PROJECT_DIR$/src/New_Assignment/Snake.java" />
         <option value="$PROJECT_DIR$/src/New_Assignment/GameFrame.java" />
+        <option value="$PROJECT_DIR$/src/New_Assignment/ScorePanel.java" />
         <option value="$PROJECT_DIR$/src/New_Assignment/GamePanel.java" />
       </list>
     </option>
@@ -312,7 +311,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544463613723" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544474204638" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../teamproject-master" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -420,7 +419,7 @@
       <workItem from="1544117202801" duration="16326000" />
       <workItem from="1544298647668" duration="5766000" />
       <workItem from="1544378800306" duration="865000" />
-      <workItem from="1544379812978" duration="19254000" />
+      <workItem from="1544379812978" duration="24311000" />
     </task>
     <task id="LOCAL-00001" summary="Added some comments">
       <created>1544300408178</created>
@@ -499,11 +498,18 @@
       <option name="project" value="LOCAL" />
       <updated>1544392421847</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Change game colour&#10;create ScorePanel&#10;Fixes">
+      <created>1544463665421</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1544463665421</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66376000" />
+    <option name="totallyTimeSpent" value="71433000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -527,7 +533,7 @@
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.32744282" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.3264642" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -588,7 +594,8 @@
     <MESSAGE value="Added checking to see if snake touches itself&#10;Added validaiton for snake leaving frame" />
     <MESSAGE value="Add restart method and button" />
     <MESSAGE value="Implemented a crappy difficulty and points system" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented a crappy difficulty and points system" />
+    <MESSAGE value="Change game colour&#10;create ScorePanel&#10;Fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change game colour&#10;create ScorePanel&#10;Fixes" />
   </component>
   <component name="editorHistoryManager">
     <entry file="jar://$USER_HOME$/Downloads/jdk1.8.0_191/src.zip!/javax/swing/JComponent.java" />
@@ -619,13 +626,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/New_Assignment/Snake.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/New_Assignment/Shape.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -643,13 +643,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/New_Assignment/GameActionListener.java">
+    <entry file="file://$PROJECT_DIR$/src/New_Assignment/Snake.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="33" lean-forward="true" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="289">
+          <caret line="17" column="30" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
         </state>
       </provider>
     </entry>
@@ -662,8 +659,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/New_Assignment/GameFrame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="56" selection-start-line="14" selection-start-column="56" selection-end-line="14" selection-end-column="56" />
+        <state relative-caret-position="255">
+          <caret line="15" column="18" lean-forward="true" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -672,21 +669,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/New_Assignment/ScorePanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        <state relative-caret-position="408">
+          <caret line="24" column="36" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
           <folding>
-            <element signature="e#138#139#0" expanded="true" />
-            <element signature="e#174#175#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/New_Assignment/GameActionListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="33" lean-forward="true" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/New_Assignment/GamePanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1377">
-          <caret line="26" column="25" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
+        <state relative-caret-position="270">
+          <caret line="108" column="39" selection-start-line="108" selection-start-column="39" selection-end-line="108" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#5394#5395#0" expanded="true" />
+            <element signature="e#5445#5446#0" expanded="true" />
           </folding>
         </state>
       </provider>

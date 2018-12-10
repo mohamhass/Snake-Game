@@ -8,13 +8,13 @@ public class GameFrame extends JFrame{
     public static void main(String[] args) {new GameFrame();}
 
     private GamePanel game = new GamePanel();
-    private ScorePanel scores = new ScorePanel(game.points);
 
 
-    private GameFrame(){
+
+    public GameFrame(){
         getContentPane().setBackground(new Color(0,26,14));
         add(game);
-
+        add(game.scores,BorderLayout.SOUTH);
         TopMenu();
         init();
         game.startGame();

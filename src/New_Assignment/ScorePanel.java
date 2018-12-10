@@ -1,17 +1,20 @@
 package New_Assignment;
 
 import javax.swing.*;
+import javax.swing.border.BevelBorder;
+
 
 public class ScorePanel extends JPanel {
-    public int points;
+    private JLabel statusLabel = new JLabel("Score");
 
-    public ScorePanel(int points){
-        this.points = points;
+
+    public ScorePanel(){
+        setBorder(new BevelBorder(BevelBorder.LOWERED));
+        statusLabel.setHorizontalAlignment(SwingConstants.LEFT);
+        add(statusLabel);
     }
 
-    public void init(){
-
-    }
+    public void setText(int totalPoints){statusLabel.setText("Score: " + totalPoints);}
 
 
 }

@@ -16,11 +16,14 @@ public class GamePanel extends JPanel implements Runnable{
     protected ArrayList<Snake> snakeLength;
     protected ArrayList<Rewards> rewardsOnMap;
     public int points = 10;
-
+    private int amountOfRewards = 5;
 
     protected boolean running = false;
     protected int defaultSnakeSize = 1;
     private GameKeyListener key = new GameKeyListener();
+
+    public ScorePanel scores = new ScorePanel();
+
 
 
     GamePanel(){
@@ -36,7 +39,7 @@ public class GamePanel extends JPanel implements Runnable{
         rewardsOnMap = new ArrayList<>();
 
         //Set the background as black
-        //For some reason the colour dosnt allow me to change to back. I think its because of the lines i have drawn on the screen
+        //For some reason the colour dosn't allow me to change to back. I think its because of the lines i have drawn on the screen
 
 
     }
@@ -64,6 +67,7 @@ public class GamePanel extends JPanel implements Runnable{
         while (running) {
             refresh();
             repaint();
+
         }
     }
 
@@ -83,11 +87,13 @@ public class GamePanel extends JPanel implements Runnable{
 
         //Creates a random reward in a random location
         if (rewardsOnMap.size() == 0){
-            //Random numbers generated for the position of the Rewards
-            int random_posX = (int) (Math.random() * (79));
-            int random_posY = (int) (Math.random() * (79));
-            Rewards newReward = new Rewards(random_posX, random_posY, 10);
-            rewardsOnMap.add(newReward);
+            while (rewardsOnMap.size() < amountOfRewards) {
+                //Random numbers generated for the position of the Rewards
+                int random_posX = (int) (Math.random() * (79));
+                int random_posY = (int) (Math.random() * (79));
+                Rewards newReward = new Rewards(random_posX, random_posY, 10);
+                rewardsOnMap.add(newReward);
+            }
         }
 
         //If the snake position is the same as the rewards on map position then increase the snake size and remove the reward.
@@ -99,6 +105,9 @@ public class GamePanel extends JPanel implements Runnable{
                 x--;
             }
         }
+
+        //Set the score text in ScorePanel
+        scores.setText(defaultSnakeSize - 1);
 
         //If the position of the snake is greater than the size of the screen, the snake will come back from 0
         if (posX < 0 || posX > (WIDTH / 10) - 1 || posY < 0 || posY > (HEIGHT / 10) - 1){
@@ -139,7 +148,6 @@ public class GamePanel extends JPanel implements Runnable{
         if(snakeLength.size() > defaultSnakeSize){
             snakeLength.remove(0);
         }
-
     }
 
     public void paint(Graphics g){
@@ -174,5 +182,6 @@ public class GamePanel extends JPanel implements Runnable{
     public Dimension getPreferredSize() {
         return new Dimension(WIDTH, HEIGHT);
     }
+
 
 }
