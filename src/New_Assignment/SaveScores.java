@@ -23,7 +23,7 @@ public class SaveScores {
             System.out.println("Added to High Score");
         }
         FileWriter writer = new FileWriter(file, true);
-        writer.write(highscores + System.lineSeparator());
+        writer.write(highscores + " points" + System.lineSeparator());
         writer.close();
     }
 }

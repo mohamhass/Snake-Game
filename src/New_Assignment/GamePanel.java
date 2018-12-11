@@ -3,8 +3,6 @@ package New_Assignment;
 import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
-import java.util.Timer;
-import java.util.TimerTask;
 import java.util.concurrent.TimeUnit;
 
 
@@ -27,6 +25,8 @@ public class GamePanel extends JPanel implements Runnable{
 
     public ScorePanel scores = new ScorePanel();
 
+    public HighScore highScore = new HighScore();
+
 
 
     GamePanel(){
@@ -36,7 +36,9 @@ public class GamePanel extends JPanel implements Runnable{
         requestFocusInWindow();
 
         //Score button add GameActionListener to save game score
-        scores.saveScore.addActionListener(new GameActionListener(this, 5));
+        scores.saveScore.addActionListener(new GameActionListener(this, 5,null));
+
+
 
         addKeyListener(key);
 

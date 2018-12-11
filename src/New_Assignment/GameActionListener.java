@@ -9,14 +9,16 @@ public class GameActionListener implements ActionListener {
         private int action;
         private GamePanel theGame;
         private SaveScores saveScores;
+        private GameFrame frame;
         //The booleans allow me to know if the same is easy medium or hard. Gonna use these in the bottom status bar
         private boolean easy = true, medium = false, hard = false;
 
 
 
-    public GameActionListener(GamePanel theGame, int action) {
+    public GameActionListener(GamePanel theGame, int action, GameFrame frame) {
             this.theGame = theGame;
             this.action = action;
+            this.frame = frame;
 
         }
 
@@ -62,6 +64,31 @@ public class GameActionListener implements ActionListener {
             theGame.setFocusable(true);
             theGame.requestFocusInWindow();
 
+
+        }
+
+        if (action == 6){
+            try {
+                theGame.stopGame();
+                theGame.highScore.readFile();
+                frame.getContentPane().remove(theGame);
+                frame.getContentPane().add(theGame.highScore);
+                frame.revalidate();
+
+            } catch (IOException e1) {
+                System.out.println("HELP MEE!!!!!");
+            }
+        }
+
+        if (action == 7){
+            frame.getContentPane().remove(theGame.highScore);
+            frame.getContentPane().add(theGame);
+            theGame.restartGame();
+            frame.revalidate();
+
+            //Sends the focus back to the game panel otherwise the KeyListener will not work
+            theGame.setFocusable(true);
+            theGame.requestFocusInWindow();
 
         }
     }

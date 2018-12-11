@@ -5,11 +5,9 @@ import java.awt.*;
 
 
 public class GameFrame extends JFrame{
-    public static void main(String[] args) {new GameFrame();}
 
     private GamePanel game = new GamePanel();
-
-
+    private HighScore highScore = new HighScore();
 
     public GameFrame(){
         getContentPane().setBackground(new Color(0,26,14));
@@ -30,7 +28,7 @@ public class GameFrame extends JFrame{
 
         //Add restart button and assign new ActionListener
         JMenuItem restart = new JMenuItem("Restart");
-        restart.addActionListener(new GameActionListener(game, 1));
+        restart.addActionListener(new GameActionListener(game, 1, null));
         settings.add(restart);
 
 
@@ -45,9 +43,9 @@ public class GameFrame extends JFrame{
         difficulty.add(hard);
 
         //Add ActionListeners to all the buttons and the unique action id
-        easy.addActionListener(new GameActionListener(game,2));
-        medium.addActionListener(new GameActionListener(game,3));
-        hard.addActionListener(new GameActionListener(game, 4));
+        easy.addActionListener(new GameActionListener(game,2, null));
+        medium.addActionListener(new GameActionListener(game,3, null));
+        hard.addActionListener(new GameActionListener(game, 4, null));
 
         //Add the menu items to bar
         bar.add(settings);
@@ -55,6 +53,8 @@ public class GameFrame extends JFrame{
     }
 
     private void init(){
+        game.scores.highScoreBtn.addActionListener(new GameActionListener(game,6, this));
+        game.highScore.backToGame.addActionListener(new GameActionListener(game, 7, this));
         //Set the close operation and the title
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setTitle("SnakeSquare Game by: 1605229");
