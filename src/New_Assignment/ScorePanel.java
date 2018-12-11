@@ -7,8 +7,10 @@ import java.awt.*;
 
 public class ScorePanel extends JPanel {
     //J Items will be added to the panel
-    private JLabel statusLabel = new JLabel("Score");
-    private JButton saveScore = new JButton("Save Score");
+    private JLabel scoreLabel = new JLabel("Score");
+    public JLabel statusLabel = new JLabel("");
+    public JButton saveScore = new JButton("Save Score");
+
 
 
     public ScorePanel(){
@@ -18,13 +20,14 @@ public class ScorePanel extends JPanel {
         setLayout(new BorderLayout());
 
         //Using null for theGame because its not going to be needed in the logic
-        saveScore.addActionListener(new GameActionListener(null, 5));
 
-        add(statusLabel);
+        add(statusLabel,BorderLayout.CENTER);
+        add(scoreLabel);
         add(saveScore,BorderLayout.EAST);
     }
 
-    public void setText(int totalPoints){statusLabel.setText("Score: " + totalPoints);}
+    public void setText(int totalPoints){
+        scoreLabel.setText("Score: " + totalPoints);}
 
 
 }

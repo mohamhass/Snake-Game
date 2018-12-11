@@ -34,6 +34,10 @@ public class GamePanel extends JPanel implements Runnable{
         //Add the keyListener
         setFocusable(true);
         requestFocusInWindow();
+
+        //Score button add GameActionListener to save game score
+        scores.saveScore.addActionListener(new GameActionListener(this, 5));
+
         addKeyListener(key);
 
 
@@ -45,6 +49,7 @@ public class GamePanel extends JPanel implements Runnable{
     public void restartGame(){
         snakeLength.clear();
         rewardsOnMap.clear();
+        scores.statusLabel.setText("");
         defaultSnakeSize = 1;
         posX = 10;
         posY = 10;
@@ -179,6 +184,8 @@ public class GamePanel extends JPanel implements Runnable{
     public Dimension getPreferredSize() {
         return new Dimension(WIDTH, HEIGHT);
     }
+
+    public int getDefaultSnakeSize(){return defaultSnakeSize;}
 
 
 }

@@ -2,19 +2,22 @@ package New_Assignment;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 
 public class GameActionListener implements ActionListener {
     //Need the action number so i can have one class and method for all the buttons
         private int action;
         private GamePanel theGame;
+        private SaveScores saveScores;
         //The booleans allow me to know if the same is easy medium or hard. Gonna use these in the bottom status bar
         private boolean easy = true, medium = false, hard = false;
 
 
 
-    public GameActionListener(GamePanel theGame, int action){
+    public GameActionListener(GamePanel theGame, int action) {
             this.theGame = theGame;
             this.action = action;
+
         }
 
     @Override
@@ -46,6 +49,19 @@ public class GameActionListener implements ActionListener {
         }
 
         if (action == 5){
+            //Initialise object with the games high score
+            saveScores = new SaveScores(theGame.defaultSnakeSize - 1);
+            try {
+                //run the save method
+                saveScores.save();
+            } catch (IOException e1) {
+                System.out.println("Save Error");
+            }
+            theGame.scores.statusLabel.setText("Added High Score");
+            //Sends the focus back to the game panel otherwise the KeyListener will not work
+            theGame.setFocusable(true);
+            theGame.requestFocusInWindow();
+
 
         }
     }

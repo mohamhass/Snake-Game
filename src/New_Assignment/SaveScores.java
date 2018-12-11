@@ -1,17 +1,29 @@
 package New_Assignment;
 
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
 
 public class SaveScores {
-    private File newfile;
-    public SaveScores() throws IOException{
 
-        newfile = new File("./");
-        if(newfile.createNewFile()){
-            
+
+    public int highscores;
+
+
+    public SaveScores(int highscores){
+        this.highscores = highscores;
+
+
+    }
+
+    public void save() throws IOException {
+        File file = new File(".//highscores.txt");
+        if (file.createNewFile()){
+            System.out.println("Created new highscores.txt file");
+            System.out.println("Added to High Score");
+        }else{
+            System.out.println("Added to High Score");
         }
-
-
+        FileWriter writer = new FileWriter(file, true);
+        writer.write(highscores + System.lineSeparator());
+        writer.close();
     }
 }

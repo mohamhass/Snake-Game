@@ -63,5 +63,7 @@ public class GameFrame extends JFrame{
 
     }
 
+    public GamePanel getGame(){return game;}
+
 
 }
