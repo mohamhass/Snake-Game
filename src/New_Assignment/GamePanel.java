@@ -3,6 +3,9 @@ package New_Assignment;
 import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
+import java.util.Timer;
+import java.util.TimerTask;
+import java.util.concurrent.TimeUnit;
 
 
 public class GamePanel extends JPanel implements Runnable{
@@ -37,9 +40,6 @@ public class GamePanel extends JPanel implements Runnable{
         //Initialise the ArrayList and start the game
         snakeLength = new ArrayList<>();
         rewardsOnMap = new ArrayList<>();
-
-
-
     }
 
     public void restartGame(){
@@ -49,13 +49,13 @@ public class GamePanel extends JPanel implements Runnable{
         posX = 10;
         posY = 10;
         running =  true;
-        startGame();
+        startGame(); // When startgame is called after a reset it causes the game to speed up
     }
 
 
     public void startGame(){
         //Create a new thread and start it
-        Thread thread = new Thread(this, "running Game");
+        Thread thread = new Thread(this, "Game");
         thread.start(); //Start the thread
         //Set the running as true
         running = true;
@@ -65,6 +65,11 @@ public class GamePanel extends JPanel implements Runnable{
     public void run(){
         while (running) {
             refresh();
+            try {
+                TimeUnit.MILLISECONDS.sleep(60);
+            } catch (InterruptedException e) {
+                System.out.println("No Chill");
+            }
             repaint();
 
         }
@@ -73,6 +78,7 @@ public class GamePanel extends JPanel implements Runnable{
     public void stopGame(){
         running = false; //stop the game
         //thread.stop(); //Stop the tread
+
     }
 
     private void refresh(){
@@ -126,13 +132,6 @@ public class GamePanel extends JPanel implements Runnable{
 
             }
         }
-
-        try {
-            Thread.sleep(55);// Sleeps the thread for 60 milliseconds. This seems so much better than just increasing a variable lol.
-        } catch (InterruptedException e) {
-            System.out.println("Could not sleep for 60");
-        }
-
 
         if (key.directionOfSnake.equals("right")) posX++;
             if (key.directionOfSnake.equals("left")) posX--;
