@@ -7,7 +7,6 @@ import java.awt.*;
 public class GameFrame extends JFrame{
 
     private GamePanel game = new GamePanel();
-    private HighScore highScore = new HighScore();
 
     public GameFrame(){
         getContentPane().setBackground(new Color(0,26,14));
@@ -24,7 +23,7 @@ public class GameFrame extends JFrame{
         JMenuBar bar = new JMenuBar();
         setJMenuBar(bar);
         //Add a settings tab
-        JMenu settings = new JMenu("Settings");
+        JMenu settings = new JMenu("File");
 
         //Add restart button and assign new ActionListener
         JMenuItem restart = new JMenuItem("Restart");

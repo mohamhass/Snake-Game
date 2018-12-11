@@ -11,6 +11,7 @@ public class ScorePanel extends JPanel {
     public JLabel statusLabel = new JLabel("");
     public JButton saveScore = new JButton("Save Score");
     public JButton highScoreBtn = new JButton("Show High Scores");
+    public JButton resetBtn = new JButton("Reset Game");
 
 
     public ScorePanel(){
@@ -25,7 +26,7 @@ public class ScorePanel extends JPanel {
         gbc.gridy = 1;
         add(statusLabel);
         add(scoreLabel, gbc);
-
+        add(resetBtn);
         add(saveScore);
         add(highScoreBtn);
     }

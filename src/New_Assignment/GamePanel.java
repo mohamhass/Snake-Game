@@ -37,6 +37,7 @@ public class GamePanel extends JPanel implements Runnable{
 
         //Score button add GameActionListener to save game score
         scores.saveScore.addActionListener(new GameActionListener(this, 5,null));
+        scores.resetBtn.addActionListener(new GameActionListener(this,1,null));
 
 
 

@@ -47,6 +47,8 @@ public class GameActionListener implements ActionListener {
         }
         if (action == 1){
             theGame.restartGame();
+            theGame.setFocusable(true);
+            theGame.requestFocusInWindow();
 
         }
 
