@@ -15,7 +15,7 @@ public class GamePanel extends JPanel implements Runnable{
 
 
     private static final int WIDTH = 800, HEIGHT = 800;//size of the JPanel, these need to be the same as the JFrame
-
+    //Snake objects are added to collection ArrayList
     protected ArrayList<Snake> snakeLength;
     protected ArrayList<Rewards> rewardsOnMap;
     public int points = 10;

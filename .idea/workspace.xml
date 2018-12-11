@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="e132391e-a944-4ae5-ace3-0b9a7551a4e2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Assignment 2/New_Assignment/GameFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Assignment 2/New_Assignment/GameFrame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Assignment 2/New_Assignment/GamePanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Assignment 2/New_Assignment/GamePanel.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/New_Assignment/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/New_Assignment/GamePanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/New_Assignment/SaveScores.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/New_Assignment/SaveScores.java" afterDir="false" />
     </list>
@@ -97,8 +95,8 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="10702" />
-          <entry key="PLAIN_TEXT" value="649" />
+          <entry key="JAVA" value="10978" />
+          <entry key="PLAIN_TEXT" value="699" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -125,8 +123,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/New_Assignment/GameFrame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="14" column="59" lean-forward="true" selection-start-line="14" selection-start-column="59" selection-end-line="14" selection-end-column="59" />
+            <state relative-caret-position="374">
+              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -137,7 +135,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/New_Assignment/ScorePanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
+            <state relative-caret-position="187">
               <caret line="11" selection-start-line="11" selection-end-line="11" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -149,8 +147,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/New_Assignment/SaveScores.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+            <state relative-caret-position="187">
+              <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -158,8 +159,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/New_Assignment/GameActionListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
-              <caret line="30" column="25" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
+            <state relative-caret-position="50">
+              <caret line="36" column="25" lean-forward="true" selection-start-line="36" selection-start-column="25" selection-end-line="36" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -179,8 +180,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/New_Assignment/GamePanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-256">
-              <caret line="41" column="41" selection-start-line="41" selection-start-column="41" selection-end-line="41" selection-end-column="41" />
+            <state relative-caret-position="255">
+              <caret line="17" column="53" selection-start-line="17" selection-start-column="53" selection-end-line="17" selection-end-column="53" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#5663#5664#0" expanded="true" />
@@ -320,7 +321,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544527813927" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544532425838" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../teamproject-master" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -441,7 +442,7 @@
       <workItem from="1544298647668" duration="5766000" />
       <workItem from="1544378800306" duration="865000" />
       <workItem from="1544379812978" duration="29221000" />
-      <workItem from="1544480008145" duration="3682000" />
+      <workItem from="1544480008145" duration="5527000" />
     </task>
     <task id="LOCAL-00001" summary="Added some comments">
       <created>1544300408178</created>
@@ -541,11 +542,18 @@
       <option name="project" value="LOCAL" />
       <updated>1544477408638</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Implemeted Timeunit sleep instead of Thread.sleep">
+      <created>1544527863633</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1544527863633</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="80025000" />
+    <option name="totallyTimeSpent" value="81870000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
@@ -560,7 +568,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32952183" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.20893972" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.20893972" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4043659" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -568,7 +576,7 @@
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="10" visible="true" weight="0.32952183" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.3264642" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -633,7 +641,8 @@
     <MESSAGE value="Change game colour&#10;create ScorePanel&#10;Fixes" />
     <MESSAGE value="Score Board is added and working" />
     <MESSAGE value="Score system is fixed&#10;Added SaveScore class with button and ActionListener logic" />
-    <option name="LAST_COMMIT_MESSAGE" value="Score system is fixed&#10;Added SaveScore class with button and ActionListener logic" />
+    <MESSAGE value="Implemeted Timeunit sleep instead of Thread.sleep" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemeted Timeunit sleep instead of Thread.sleep" />
   </component>
   <component name="editorHistoryManager">
     <entry file="jar://$USER_HOME$/Downloads/jdk1.8.0_191/src.zip!/javax/swing/JComponent.java" />
@@ -658,16 +667,6 @@
     <entry file="file://$PROJECT_DIR$/src/Snake/GamePanel.java" />
     <entry file="file://$PROJECT_DIR$/src/Snake/LoserPanel.java" />
     <entry file="file://$PROJECT_DIR$/src/New_Assignment/TopMenuBar.java" />
-    <entry file="file://$PROJECT_DIR$/src/New_Assignment/ScorePanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/New_Assignment/Rewards.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -701,8 +700,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/New_Assignment/GameFrame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="14" column="59" lean-forward="true" selection-start-line="14" selection-start-column="59" selection-end-line="14" selection-end-column="59" />
+        <state relative-caret-position="374">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/New_Assignment/ScorePanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -711,8 +720,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/New_Assignment/GameActionListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="30" column="25" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
+        <state relative-caret-position="50">
+          <caret line="36" column="25" lean-forward="true" selection-start-line="36" selection-start-column="25" selection-end-line="36" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -721,8 +730,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/New_Assignment/GamePanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-256">
-          <caret line="41" column="41" selection-start-line="41" selection-start-column="41" selection-end-line="41" selection-end-column="41" />
+        <state relative-caret-position="255">
+          <caret line="17" column="53" selection-start-line="17" selection-start-column="53" selection-end-line="17" selection-end-column="53" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#5663#5664#0" expanded="true" />
@@ -733,8 +742,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/New_Assignment/SaveScores.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+        <state relative-caret-position="187">
+          <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
