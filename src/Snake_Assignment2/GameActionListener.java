@@ -1,4 +1,4 @@
-package New_Assignment;
+package Snake_Assignment2;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

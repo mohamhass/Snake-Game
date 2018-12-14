@@ -1,4 +1,4 @@
-package New_Assignment;
+package Snake_Assignment2;
 
 import javax.swing.*;
 import javax.swing.border.BevelBorder;
